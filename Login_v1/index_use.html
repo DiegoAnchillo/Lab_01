@@ -30,7 +30,7 @@
 					<img src="images/img-01.png" alt="IMG">
 				</div>
 
-				<form class="login100-form validate-form" action="producto.php" method="GET">
+				<form class="login100-form validate-form"  name="login">
 					<span class="login100-form-title">
 						Member Login
 					</span>
@@ -58,13 +58,13 @@
 						var done=0; 
 						var email=document.login.email.value; 
 						var pass=document.login.pass.value; 
-						if (email=="ADMIN" && pass=="123456") { 
+						if (email=="admin" && pass=="123456") { 
 						window.location="producto.html"; 
 						} 
-						if (email=="USUARIO1" && pass=="1234") { 
+						if (email=="user1" && pass=="1234") { 
 						window.location="producto.html"; 
 						} 
-						if (email=="USUARIO2" && pass=="1234") { 
+						if (email=="user2" && pass=="1234") { 
 						window.location="producto.html"; 
 						} 
 						} 
