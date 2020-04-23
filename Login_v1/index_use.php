@@ -30,7 +30,7 @@
 					<img src="images/img-01.png" alt="IMG">
 				</div>
 
-				<form class="login100-form validate-form">
+				<form class="login100-form validate-form" action="producto.php" method="GET">
 					<span class="login100-form-title">
 						Member Login
 					</span>
@@ -50,9 +50,20 @@
 							<i class="fa fa-lock" aria-hidden="true"></i>
 						</span>
 					</div>
+
+					<?php
+						$admin = $_GET['email'];
+						$password = $_GET['pass'];
+						if (($admin == "admin") AND ($password == "123456")) {
+							echo "Bienvenido".$admin;
+						} else {
+							echo "¡Usuario o contraseña incorrectos!";
+							echo '<br><a href="'.$_SERVER['HTTP_REFERER'].'">Volver</a>';
+						}
+					?>
 					
 					<div class="container-login100-form-btn">
-						<a href="Productos.html" class="login100-form-btn">
+						<a class="login100-form-btn">
 							Login
 						</a>
 					</div>
